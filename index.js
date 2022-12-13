@@ -7,8 +7,6 @@ const cookieParser = require("cookie-parser");
 const upload = require("express-fileupload");
 const fs = require("fs");
 
- 
-
 app.use(upload());
 
 app.use(cookieParser());
@@ -26,6 +24,7 @@ const allowedOrigins = [
   "http://localhost:4000",
   "http://192.168.1.100:3000",
   "http://192.168.1.102:3000",
+  "https://schoolbackend-production-1e60.up.railway.app/api",
 ];
 
 app.use(
@@ -54,7 +53,6 @@ app.use("/api/profile", require("./Profile/Userprofile"));
 
 // image upload
 app.use("/api/imageupload", require("./routes/ImageUpload"));
- 
 
 app.listen(PORT, () => {
   console.log(`server is running on http://localhost:4000`);
