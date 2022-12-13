@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 const multer = require("multer");
 const cookieParser = require("cookie-parser");
 const upload = require("express-fileupload");
@@ -56,6 +56,6 @@ app.use("/api/profile", require("./Profile/Userprofile"));
 app.use("/api/imageupload", require("./routes/ImageUpload"));
  
 
-app.listen(4000, () => {
+app.listen(PORT, () => {
   console.log(`server is running on http://localhost:4000`);
 });
