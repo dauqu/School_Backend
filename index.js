@@ -25,6 +25,8 @@ const allowedOrigins = [
   "http://192.168.1.100:3000",
   "http://192.168.1.102:3000",
   "https://schoolbackend-production-1e60.up.railway.app/api",
+  "https://school-rouge-two.vercel.app",
+  "https://school-rouge-two.vercel.app/",
 ];
 
 app.use(
